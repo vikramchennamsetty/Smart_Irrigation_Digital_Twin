@@ -114,7 +114,7 @@ while true
         disp("ERROR OCCURRED — SKIPPING CYCLE");
         disp(ME.message);
     end
-
+    params.current_day = params.current_day + 1;
     pause(20);
 end
 end
