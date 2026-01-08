@@ -21,6 +21,8 @@ params.current_day = 1;
 % Initial states
 theta_hat = 0.25;   % estimated soil moisture
 PSI_hat   = 0;      % plant stress index
+I_applied = 0;   % irrigation applied in previous cycle
+
 
 % Last valid cache
 lastSoil = NaN;
@@ -71,7 +73,8 @@ while true
         theta_meas = max(0, min(1, theta_meas));
 
         % Environment model
-        ET = evapotranspiration_model();
+        ET = evapotranspiration_model(temp, hum/100);
+
 
         % Digital twin estimator
         [theta_hat, PSI_hat] = digital_twin_estimator( ...
