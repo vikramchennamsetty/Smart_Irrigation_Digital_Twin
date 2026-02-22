@@ -1,0 +1,30 @@
+# ========================= CREDENTIALS =================================
+# Never commit real credentials
+config.h
+
+# ========================= SIMULINK CACHE ==============================
+slprj/
+*.slxc
+
+# ========================= MATLAB ======================================
+*.asv
+*.m~
+*.mex*
+*.mexw64
+*.mexmaci64
+*.mexa64
+
+# ========================= RESULTS (optional) ==========================
+# Uncomment below if you do NOT want to commit result images
+# results/matlab_outputs/*.png
+# results/simulink_outputs/*.png
+
+# ========================= OS FILES ====================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================= TEMP FILES ==================================
+*.tmp
+*.log
+*.bak
